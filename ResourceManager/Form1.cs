@@ -29,15 +29,14 @@
 
         void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ListBox listBox = listBox1;
-            object selectedItem = ((DictionaryEntry)listBox.SelectedItem).Value;
+            object selectedItem = ((DictionaryEntry)listBox1.SelectedItem).Value;
             switch (selectedItem.GetType().Name)
             {
                 case "Bitmap":
-                    pictureBox1.Image = (Image)((DictionaryEntry)listBox.SelectedItem).Value;
+                    pictureBox1.Image = (Image)((DictionaryEntry)listBox1.SelectedItem).Value;
                     break;
                 case "Icon":
-                    pictureBox1.Image = ((Icon)((DictionaryEntry)listBox.SelectedItem).Value).ToBitmap();
+                    pictureBox1.Image = ((Icon)((DictionaryEntry)listBox1.SelectedItem).Value).ToBitmap();
                     break;
                 case "String":
                     textBox1.Text = (string)selectedItem;
